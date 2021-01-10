@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SafeAreaView, StyleSheet, Text, View} from 'react-native';
 import TodoInsert from './components/TodoInsert';
 import TodoList from './components/TodoList';
@@ -29,12 +29,21 @@ const styles = StyleSheet.create({
 });
 
 const App = () => {
+  const [todos, setTodos] = useState([]);
+
+  const addTodo = (text) => {
+    setTodos([
+      ...todos,
+      {id: Math.random().toString(), textValue: text, checked: false},
+    ]);
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.appTitle}>Hello World</Text>
       <View style={styles.card}>
-        <TodoInsert />
-        <TodoList />
+        <TodoInsert onAddTodo={addTodo} />
+        <TodoList todos={todos} />
       </View>
     </SafeAreaView>
   );

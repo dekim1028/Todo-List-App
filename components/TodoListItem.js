@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const TodoListItem = () => {
+const TodoListItem = ({id, textValue, checked}) => {
   Icon.loadFont();
   return (
     <View style={styles.container}>
@@ -53,9 +53,7 @@ const TodoListItem = () => {
           <Icon name="circledowno" size={20} color="#3143e8" />
         </View>
       </TouchableOpacity>
-      <Text style={[styles.text, styles.strikeText]}>
-        Items will be shown here
-      </Text>
+      <Text style={[styles.text, styles.strikeText]}>{textValue}</Text>
       <TouchableOpacity style={styles.buttonContainer}>
         <Text style={styles.buttonText}>
           <Icon name="delete" size={20} color="#e33057" />
