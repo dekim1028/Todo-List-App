@@ -1,5 +1,14 @@
 import React from 'react';
-import {SafeAreaView, StyleSheet, Text, View, TextInput} from 'react-native';
+import {
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  ScrollView,
+} from 'react-native';
+import TodoInsert from './components/TodoInsert';
+import TodoList from './components/TodoList';
 
 const styles = StyleSheet.create({
   container: {
@@ -24,13 +33,6 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginBottom: 30,
   },
-  input: {
-    padding: 20,
-    borderBottomColor: '#bbb',
-    borderBottomWidth: 1,
-    fontSize: 24,
-    marginLeft: 20,
-  },
 });
 
 const App = () => {
@@ -38,7 +40,8 @@ const App = () => {
     <SafeAreaView style={styles.container}>
       <Text style={styles.appTitle}>Hello World</Text>
       <View style={styles.card}>
-        <TextInput style={styles.input} placeholder="Add an item!" />
+        <TodoInsert />
+        <TodoList />
       </View>
     </SafeAreaView>
   );
