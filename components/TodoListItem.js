@@ -44,16 +44,26 @@ const styles = StyleSheet.create({
   },
 });
 
-const TodoListItem = ({id, textValue, checked, onRemove}) => {
+const TodoListItem = ({id, textValue, checked, onRemove, onToggle}) => {
   Icon.loadFont();
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
-        <View style={styles.completeCircle}>
-          <Icon name="circledowno" size={20} color="#3143e8" />
-        </View>
+      <TouchableOpacity onPress={onToggle(id)}>
+        {checked ? (
+          <View style={styles.completeCircle}>
+            <Icon name="circledowno" size={20} color="#3143e8" />
+          </View>
+        ) : (
+          <View style={styles.circle} />
+        )}
       </TouchableOpacity>
-      <Text style={[styles.text, styles.strikeText]}>{textValue}</Text>
+      <Text
+        style={[
+          styles.text,
+          checked ? styles.strikeText : styles.unstrikeText,
+        ]}>
+        {textValue}
+      </Text>
       <TouchableOpacity style={styles.buttonContainer}>
         <Text style={styles.buttonText} onPress={onRemove(id)}>
           <Icon name="delete" size={20} color="#e33057" />
