@@ -149,6 +149,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6FD1870F25AAB78500FACFDB /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6FD1871925AAB7E400FACFDB /* AntDesign.ttf */,
+				6FD1871F25AAB7E400FACFDB /* Entypo.ttf */,
+				6FD1871D25AAB7E400FACFDB /* EvilIcons.ttf */,
+				6FD1871525AAB7E400FACFDB /* Feather.ttf */,
+				6FD1871025AAB7E400FACFDB /* FontAwesome.ttf */,
+				6FD1871825AAB7E400FACFDB /* FontAwesome5_Brands.ttf */,
+				6FD1871E25AAB7E400FACFDB /* FontAwesome5_Regular.ttf */,
+				6FD1871A25AAB7E400FACFDB /* FontAwesome5_Solid.ttf */,
+				6FD1871125AAB7E400FACFDB /* Fontisto.ttf */,
+				6FD1871425AAB7E400FACFDB /* Foundation.ttf */,
+				6FD1871C25AAB7E400FACFDB /* Ionicons.ttf */,
+				6FD1871B25AAB7E400FACFDB /* MaterialCommunityIcons.ttf */,
+				6FD1871725AAB7E400FACFDB /* MaterialIcons.ttf */,
+				6FD1871225AAB7E400FACFDB /* Octicons.ttf */,
+				6FD1871625AAB7E400FACFDB /* SimpleLineIcons.ttf */,
+				6FD1871325AAB7E400FACFDB /* Zocial.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		82C5160498B11175DABABB9B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,7 +184,6 @@
 				5C36A291D54CA47207B9B010 /* Pods-StudyProject-tvOSTests.debug.xcconfig */,
 				C6F892C00A6FA0F1EDCB830D /* Pods-StudyProject-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +197,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				6FD1870F25AAB78500FACFDB /* Fonts */,
 				13B07FAE1A68108700A75B9A /* StudyProject */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* StudyProjectTests */,
@@ -204,7 +227,6 @@
 			children = (
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
